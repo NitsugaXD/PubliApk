@@ -1,4 +1,5 @@
 function downloadApk() {
+    alert('hola')
     var userAgent = navigator.userAgent.toLowerCase();
 
     // Verifica si el usuario está utilizando un navegador móvil
