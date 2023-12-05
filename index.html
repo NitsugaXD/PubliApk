@@ -3,33 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Aplicación</title>
-    <link rel="stylesheet" href="css.css">
+    <title>Mi Aplicación</title>
+    <script>
+        window.onload = function() {
+            var userAgent = navigator.userAgent.toLowerCase();
+            var isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
+            
+            if (!isMobile) {
+                // Si no es un dispositivo móvil, redirige a una página de advertencia o muestra un mensaje
+                alert("Esta descarga solo está disponible para dispositivos móviles.");
+                // Puedes redirigir a otra página o realizar otras acciones según tus necesidades
+                window.location.href = "pagina-de-advertencia.html";
+            }
+        };
+    </script>
 </head>
 <body>
-    <header>
-        <h1>Tu Aplicación</h1>
-    </header>
-
-    <main>
-        <p>Bienvenido a la página de Tu Aplicación.</p>
-        <p>Descarga la aplicación a continuación:</p>
-        <a  href="AsistenciaDuoc.apk" download>Descargar APK</a>
-    </main>
+    <h1>Bienvenido a Mi Aplicación</h1>
+    <p>Haz clic en el enlace para descargar la aplicación:</p>
+    <a href="ruta/a/tu/aplicacion.apk" download>Descargar Aplicación</a>
 </body>
-    <script>
-    function downloadApk() {
-    alert('hola')
-    var userAgent = navigator.userAgent.toLowerCase();
-
-    // Verifica si el usuario está utilizando un navegador móvil
-    var isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
-
-    if (isMobile) {
-        // Si es un navegador móvil, redirige a la descarga del APK
-        href = 'AsistenciaDuco.apk'; // Ajusta la ruta según tu estructura
-    } else {
-        // Si es un navegador de escritorio, muestra un mensaje de error
-        alert('La descarga está disponible solo desde dispositivos móviles.');}}
-        </script>
 </html>
