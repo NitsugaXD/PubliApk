@@ -36,3 +36,9 @@ a:hover {
     font-weight: bold;
     margin-top: 25px;
 }
+
+#welcomeMessage {
+    color: #555; /* Adjusted to a lighter color */
+    font-size: 24px;
+    margin-bottom: 15px; /* Added some space below the welcome message */
+}
