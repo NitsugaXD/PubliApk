@@ -9,32 +9,36 @@
         window.onload = function() {
             var userAgent = navigator.userAgent.toLowerCase();
 
+            // Check for different types of devices
             var isAndroid = /android/i.test(userAgent);
             var isiOS = /iphone|ipad|ipod/i.test(userAgent);
             var isBlackberry = /blackberry/i.test(userAgent);
             var isWindowsPhone = /iemobile/i.test(userAgent);
 
+            var welcomeMessage = "Bienvenido a Mi Aplicación";
+
             if (isAndroid) {
-                alert("¡Bienvenido desde un dispositivo Android!");
+                welcomeMessage += " desde un dispositivo Android!";
             } else if (isiOS) {
-                alert("¡Bienvenido desde un dispositivo iOS!");
+                welcomeMessage += " desde un dispositivo iOS!";
             } else if (isBlackberry) {
-                alert("¡Bienvenido desde un dispositivo Blackberry!");
+                welcomeMessage += " desde un dispositivo Blackberry!";
             } else if (isWindowsPhone) {
-                alert("¡Bienvenido desde un dispositivo Windows Phone!");
+                welcomeMessage += " desde un dispositivo Windows Phone!";
             } else {
-                alert("¡Bienvenido! Esta descarga está optimizada para dispositivos móviles.");
+                welcomeMessage += "! Esta descarga está optimizada para dispositivos móviles.";
             }
+
+            document.getElementById("welcomeMessage").innerText = welcomeMessage;
         };
     </script>
 </head>
 <body>
     <header>
-        <h1>Bienvenido a Mi Aplicación</h1>
+        <h1 id="welcomeMessage">Bienvenido a Mi Aplicación</h1>
     </header>
     <p>Haz clic en el enlace para descargar la aplicación:</p>
     <a href="AsistenciaDuoc.apk" download>Descargar Aplicación</a>
+    <p class="warning">Nota: Esta descarga está optimizada para dispositivos móviles.</p>
 </body>
 </html>
-
-
