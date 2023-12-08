@@ -13,7 +13,7 @@ header {
 }
 
 h1, p {
-    color: #333;
+    color: #fff; /* Change the color of h1 to white */
 }
 
 a {
@@ -35,10 +35,4 @@ a:hover {
     color: #ff3333;
     font-weight: bold;
     margin-top: 25px;
-}
-
-#welcomeMessage {
-    color: #555; /* Adjusted to a lighter color */
-    font-size: 24px;
-    margin-bottom: 15px; /* Added some space below the welcome message */
 }
