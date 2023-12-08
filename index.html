@@ -8,11 +8,22 @@
     <script>
         window.onload = function() {
             var userAgent = navigator.userAgent.toLowerCase();
-            var isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
-            
-            if (!isMobile) {
-                alert("Esta descarga solo está disponible para dispositivos móviles.");
-                window.location.href = "advertencia.html";
+
+            var isAndroid = /android/i.test(userAgent);
+            var isiOS = /iphone|ipad|ipod/i.test(userAgent);
+            var isBlackberry = /blackberry/i.test(userAgent);
+            var isWindowsPhone = /iemobile/i.test(userAgent);
+
+            if (isAndroid) {
+                alert("¡Bienvenido desde un dispositivo Android!");
+            } else if (isiOS) {
+                alert("¡Bienvenido desde un dispositivo iOS!");
+            } else if (isBlackberry) {
+                alert("¡Bienvenido desde un dispositivo Blackberry!");
+            } else if (isWindowsPhone) {
+                alert("¡Bienvenido desde un dispositivo Windows Phone!");
+            } else {
+                alert("¡Bienvenido! Esta descarga está optimizada para dispositivos móviles.");
             }
         };
     </script>
@@ -23,7 +34,7 @@
     </header>
     <p>Haz clic en el enlace para descargar la aplicación:</p>
     <a href="AsistenciaDuoc.apk" download>Descargar Aplicación</a>
-    <p class="warning">Nota: Esta descarga solo está disponible para dispositivos móviles.</p>
 </body>
 </html>
+
 
