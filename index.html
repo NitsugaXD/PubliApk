@@ -14,6 +14,7 @@
             var isiOS = /iphone|ipad|ipod/i.test(userAgent);
             var isBlackberry = /blackberry/i.test(userAgent);
             var isWindowsPhone = /iemobile/i.test(userAgent);
+            var isDesktop = !/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
 
             var welcomeMessage = "Bienvenido a Mi Aplicación";
 
@@ -25,10 +26,13 @@
                 welcomeMessage += " desde un dispositivo Blackberry!";
             } else if (isWindowsPhone) {
                 welcomeMessage += " desde un dispositivo Windows Phone!";
+            } else if (isDesktop) {
+                welcomeMessage += " desde un PC u otro dispositivo.";
             } else {
                 welcomeMessage += "! Esta descarga está optimizada para dispositivos móviles.";
             }
 
+            // Display the welcome message in the header
             document.getElementById("welcomeMessage").innerText = welcomeMessage;
         };
     </script>
